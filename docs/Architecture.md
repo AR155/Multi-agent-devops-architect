@@ -1,40 +1,27 @@
-Multi-Agent DevOps Architect – Architecture
+# &nbsp; Architecture Overview
 
+## Vision
 
-Vision :- The project aims to build an **AI-driven, Multi-Agent DevOps Architecture** that automates infrastructure provisioning, CI/CD, monitoring, and optimization.  
-Each agent focuses on a specific role (Planner, IaC Generator, CI/CD Executor, Monitor, Optimizer) and collaborates to deliver end-to-end DevOps workflows.
+The goal is to build a **Multi-Agent DevOps Architect** that blends:
 
+* Reinforcement Learning
+* DevOps automation
+* MLOps tracking
 
-High-Level Agent Design
-- **Planner Agent** → Reads project requirements & proposes infra/DevOps setup.
-- **IaC Generator Agent** → Creates Terraform/Docker/K8s manifests for infra.
-- **CI/CD Agent** → Sets up pipelines (GitHub Actions/Jenkins).
-- **Monitor Agent** → Observes system health, logs, and metrics.
-- **Optimizer Agent** → Suggests improvements, scaling, cost optimization.
+## Agents
 
+1. **Planner Agent** → Creates workflow plan
+2. **IaC Generator Agent** → Produces Terraform/Docker configs
+3. **CI/CD Agent** → Runs pipelines
+4. **Monitor Agent** → Observes system
+5. **Optimizer Agent** → RL-based optimization
 
-Tech Stack
-- **Language** → Python (agents, orchestration)
-- **Infra as Code** → Terraform, Docker
-- **Pipelines** → GitHub Actions (CI/CD automation)
-- **Container Orchestration** → Kubernetes / Minikube (local testing)
-- **Version Control** → Git + GitHub
-- **Monitoring** → Prometheus + Grafana
+## Tech Decisions
 
+* **Python** for core logic
+* **Docker** for isolation
+* **Terraform** for IaC
+* **GitHub Actions** for CI/CD
 
-Folder Structure
-Multi-Agent-Devops-Architect/
-│
-├── agents/
-│ ├── planner/ # AI agent for planning infra
-│ ├── iac_generator/ # Generates Terraform, Docker, K8s manifests
-│ ├── cicd/ # Sets up CI/CD pipelines
-│ ├── monitor/ # Observes metrics/logs
-│ └── optimizer/ # Suggests cost/performance improvements
-│
-├── docs/
-│ └── ARCHITECTURE.md # This file
-│
-├── requirements.txt # Python dependencies
-├── Makefile # Helper commands
-└── README.md # Project intro
+**DVC + MLflow** for tracking
+
