@@ -24,4 +24,3 @@ The goal is to build a **Multi-Agent DevOps Architect** that blends:
 * **GitHub Actions** for CI/CD
 
 **DVC + MLflow** for tracking
-

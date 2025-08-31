@@ -1,0 +1,25 @@
+Parses repo → outputs JSON schema.
+
+import os, json
+
+def analyze_repo(repo_path: str, brief: str):
+    schema = {
+        "services": [],
+        "build": {},
+        "deploy": {},
+        "env": {},
+        "policies": {},
+        "ci": {}
+    }
+
+    # Example: detect Python
+    if os.path.exists(os.path.join(repo_path, "requirements.txt")):
+        schema["services"].append("python-app")
+        schema["build"] = {"type": "docker"}
+        schema["ci"] = {"type": "github-actions"}
+
+    return schema
+
+if __name__ == "__main__":
+    result = analyze_repo("./examples/todoapp", "Simple todo app")
+    print(json.dumps(result, indent=2))
